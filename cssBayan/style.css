@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.main__wrapper{
+   max-width: 500px;
+   margin: 0 auto;
+}
+.first__title{
+    border-top: 2px solid #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    transition: all 1s ease-out;
+}
+.img{
+    display: none; 
+    padding-top: 5px;
+    margin: 0 auto; 
+}
+.first__mems .first__title{
+    opacity: 0.7;
+    transition: opacity 1.5s ease-out;
+}
+.first__mems:hover .first__title{
+    opacity: 1;
+}
+.first__title:hover .img{
+    display: block;
+}
+.icon{
+    background-image: url(plus-solid.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin-left:  auto;
+    transition: all 1s ease-out;
+}
+.all__mems:hover .icon {
+    opacity: 1;
+    transition: all 1s ease-out;
+} 
+.first__title:hover .icon{
+    transform: rotate(-315deg);
+    transition: all 1s ease-out;
+}
+.first__title:focus .img{
+    display: block;
+    transition: all 0.5s ease-out;
+}
+.first__title:hover .img{
+    transition: all 1s ease-out;
+}
+button{
+    background: none;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: blue;
+    padding-left: 0;
+    cursor: pointer;
+}
+button:hover{
+    color: black;
+}
+button:active {
+    cursor: grab;
+}
+button:active .icon{
+    opacity: 0.5;
+}
+button:active, button:focus  {
+    color: black;
+}
+button:focus .icon{
+    transform: rotate(-315deg);
+    transition: all 1s ease-out;
+}
+@media screen and (max-width: 1000px) and (min-width: 820px){
+    .main__wrapper{
+        max-width: 400px;
+    }
+    .first__title{
+        font-size: 18px;
+        transition: all 1s ease-out;
+    }
+    .img{
+        width: 56%;
+    }
+}
+@media screen and (max-width: 819px) and (min-width: 320px){
+    .main__wrapper{
+        max-width: 300px;
+    }
+    .first__title{
+        font-size: 16px;
+        transition: all 1s ease-out;
+    }
+    .img{
+        width: 47%;
+        margin: 0 auto;
+    }
+}
