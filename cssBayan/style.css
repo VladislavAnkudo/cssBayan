@@ -22,6 +22,13 @@ body{
     padding-top: 5px;
     margin: 0 auto; 
 }
+.first__mems .first__title{
+    opacity: 0.7;
+    transition: opacity 1.5s ease-out;
+}
+.first__mems:hover .first__title{
+    opacity: 1;
+}
 .first__title:hover .img{
     display: block;
 }
@@ -46,6 +53,9 @@ body{
     display: block;
     transition: all 0.5s ease-out;
 }
+.first__title:hover .img{
+    transition: all 1s ease-out;
+}
 button{
     background: none;
     width: 100%;
@@ -58,10 +68,11 @@ button{
 button:hover{
     color: black;
 }
+button:active {
+    cursor: grab;
+}
 button:active .icon{
     opacity: 0.5;
-    transition: all 0.5s ease-out;
-    cursor: grab;
 }
 button:active, button:focus  {
     color: black;
